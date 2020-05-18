@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const Workout = require("../models/workout.js");
 const API = {
   async getLastWorkout() {
     let res;
