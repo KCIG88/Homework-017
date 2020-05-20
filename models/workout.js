@@ -34,11 +34,20 @@ const WorkoutSchema = new Schema({
       set: {
         type: Number,
         required: "Enter number of sets.",
-      },
-    },
-  ],
+      }
+    }
+  ]
+},
+{
+toJSON: {
+  virtuals: true
+}
+}
+);
+workoutSchema.virtual("totalDuration").get(function () {
+return this.exercises.reduce((total, exercise) => {
+return total + exercise.duration;
+}, 0);
 });
-
-const Workout = mongoose.model("Workout", WorkoutSchema);
-
+const Workout = mongoose.model("Workout", workoutSchema);
 module.exports = Workout;
