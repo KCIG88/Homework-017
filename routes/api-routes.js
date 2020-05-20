@@ -50,7 +50,7 @@ router.put("/api/workouts/:id", (req, res) => {
   console.log(body)
   Workouts.findByIdAndUpdate(req.params.id, { $push: { exercises: body }, $inc: { totalDuration: duration } })
     .then(dbWorkouts => {
-      // console.log(dbWorkouts)
+     
       res.json(dbWorkouts);
     })
     .catch(err => {
