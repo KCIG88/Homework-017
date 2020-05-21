@@ -9,23 +9,11 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "kevin_cox",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
     "mongoose": "^5.3.16",
     "morgan": "^1.9.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KCIG88/Homework-017.git"
-  },
-  "keywords": [
-    "workout"
-  ],
-  "bugs": {
-    "url": "https://github.com/KCIG88/Homework-017/issues"
-  },
-  "homepage": "https://github.com/KCIG88/Homework-017#readme",
-  "devDependencies": {}
+  }
 }
